@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bigshot+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+@import "tailwindcss";
+@import 'flag-icons/css/flag-icons.min.css';
+
+@theme {
+  --color-true-blue: #0466c8;
+  --color-sapphire: #0353a4;
+  --color-yale-blue: #023e7d;
+  --color-oxford-blue: #002855;
+  --color-oxford-blue-2: #001845;
+  --color-oxford-blue-3: #001233;
+  --color-delft-blue: #33415c;
+  --color-paynes-gray: #5c677d;
+  --color-slate-gray: #7d8597;
+  --color-cool-gray: #979dac;
+}
+
+@layer base {
+  :root {
+    --true-blue: var(--color-true-blue);
+    --sapphire: var(--color-sapphire);
+    --yale-blue: var(--color-yale-blue);
+    --oxford-blue: var(--color-oxford-blue);
+    --oxford-blue-2: var(--color-oxford-blue-2);
+    --oxford-blue-3: var(--color-oxford-blue-3);
+    --delft-blue: var(--color-delft-blue);
+    --paynes-gray: var(--color-paynes-gray);
+    --slate-gray: var(--color-slate-gray);
+    --cool-gray: var(--color-cool-gray);
+  }
+
+  html {
+    font-family: 'Special Gothic Expanded One', sans-serif;
+    font-size: 16px;
+    background-color: var(--color-oxford-blue-3);
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl;
+    font-family: 'Michroma', sans-serif;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl;
+    font-family: 'Michroma', sans-serif;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+    font-family: 'Michroma', sans-serif;
+  }
+
+  .subtitle {
+    @apply text-2xl md:text-3xl;
+    font-family: 'Bigshot One', cursive;
+  }
+
+  p {
+    @apply text-base md:text-lg;
+  }
+
+  .container {
+    @apply max-w-[1600px] mx-auto px-4;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-true-blue to-sapphire;
+  }
+
+  .decorative-line {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-true-blue after:rounded-full;
+  }
+
+  .floating-shape {
+    @apply absolute w-32 h-32 rounded-full bg-true-blue/20 blur-2xl;
+  }
+
+  .content-container {
+    @apply max-w-[1200px] mx-auto;
+  }
+
+  .section-gradient {
+    @apply absolute inset-0;
+    background: linear-gradient(180deg, transparent, var(--color-oxford-blue-3) 15%, var(--color-oxford-blue-3) 85%, transparent);
+  }
+
+  .section-overlay {
+    @apply absolute inset-0;
+    background: radial-gradient(circle at center, transparent 0%, var(--color-oxford-blue-3) 100%);
+    opacity: 0.3;
+  }
+
+  .section-transition-top {
+    @apply absolute top-0 left-0 right-0 h-32;
+    background: linear-gradient(180deg, var(--color-oxford-blue-3), transparent);
+  }
+
+  .section-transition-bottom {
+    @apply absolute bottom-0 left-0 right-0 h-32;
+    background: linear-gradient(0deg, var(--color-oxford-blue-3), transparent);
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+}

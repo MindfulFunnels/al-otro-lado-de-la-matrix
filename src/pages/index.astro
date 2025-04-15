@@ -1,11 +1,151 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import ProblemSection from "../components/ProblemSection.astro";
+import TransformationSection from "../components/TransformationSection.astro";
+import AboutSection from "../components/AboutSection.astro";
+import CaminoSection from "../components/CaminoSection.astro";
+import TestimonialsSection from "../components/TestimonialsSection.astro";
+import FinalCTASection from "../components/FinalCTASection.astro";
+import FAQSection from "../components/FAQSection.astro";
+import LiveEventSection from "../components/LiveEventSection.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <div id="hero">
+    <Hero
+      title="Al otro lado de la Matrix"
+      subtitle="No es un curso ni una formación. Es el billete de ida y sin retorno hacia tu verdadera esencia infinita y eterna."
+      ctaText="Inscribirme Ahora"
+      ctaLink="#contacto"
+    />
+  </div>
+
+  <div id="problem">
+    <ProblemSection
+      title="¿Te sientes atrapado en la Matrix?"
+      description="El 99% de la población sigue queriendo resultados desde el mismo paradigma obsoleto de la competitividad, la comparación y la incoherencia."
+      questions={[
+        "¿Te imaginas vivir una vida alineada energéticamente a tu verdadera identidad espiritual?",
+        "¿Te atreves a dominar las áreas de la salud física y mental, la economía y el mundo laboral, junto con las relaciones interpersonales?",
+        "¿Estás cansado de vivir una vida de esclavo, basada en los condicionamientos sociales de un sistema podrido?",
+        "¿Sientes que hay algo más allá de lo que te han enseñado, pero no sabes cómo acceder a ello?",
+      ]}
+    />
+  </div>
+
+  <div id="transformation">
+    <TransformationSection
+      title="Tu Transformación Comienza Aquí"
+      description="Descubre lo que se siente más allá de la matrix oscura."
+      benefits={[
+        "Desparasitar todos tus cuerpos multidimensionales (físico, mental, emocional, energético y espiritual)",
+        "Desarrollar la mentalidad de otro planeta que solo el 1% tiene",
+        "Entrar en un círculo selecto de seres conscientes que han entendido la trampa del sistema",
+        "Conectar con tu misión de vida y convertirla en tu dedicación profesional IKIGAI",
+        "Desbloquear conflictos energéticos con el dinero, la abundancia y las relaciones",
+        "Operar desde tu verdadero poder, siendo un ser amoroso y en armonía con todo",
+      ]}
+    />
+  </div>
+
+  <div id="camino">
+    <CaminoSection
+      title="El Camino de Transformación"
+      description="Un viaje hacia tu verdadera esencia, guiado por una metodología única y transformadora."
+      steps={[
+        "Identificación y liberación de creencias limitantes y patrones heredados",
+        "Activación de tu poder interior y conexión con tu esencia infinita",
+        "Desarrollo de la mentalidad de otro planeta y rompimiento de paradigmas",
+        "Integración de principios espirituales en todas las áreas de tu vida",
+        "Creación de una nueva realidad basada en tu verdadera identidad",
+        "Mantenimiento de la coherencia y expansión continua de consciencia",
+      ]}
+    />
+
+    <div id="live-event">
+      <LiveEventSection />
+    </div>
+
+    <div id="final-cta">
+      <FinalCTASection
+        title="¿Estás Listo para la Transformación?"
+        description="Todo el mundo sabe lo que tiene que hacer, pero casi nadie lo hace. La pregunta es ¿por qué? La respuesta está AL OTRO LADO DE LA MATRIX."
+        ctaText="Inscribirme Ahora"
+        ctaLink="#contacto"
+      />
+    </div>
+
+    <div id="about">
+      <AboutSection
+        title="Luis Garre"
+        description="Mentor #1 que expone y hackea el sistema corrupto y la matrix de control. Creador de una metodología única y transformadora."
+        achievements={[
+          "Impactando a millones en redes sociales con mensajes de verdad y consciencia",
+          "Autor de libros best-seller que se venden por miles en todo el planeta",
+          "Creador de una comunidad de un millón de seres humanos conscientes",
+          "Experto en desbloquear mentes y transformar vidas en pocas semanas",
+          "Viviendo de su propósito con energía ilimitada y salud máxima",
+          "Familia feliz y próspera, rompiendo el techo económico de la matrix",
+        ]}
+      />
+    </div>
+
+    <div id="testimonials">
+      <TestimonialsSection
+        title="Lo que dicen nuestros clientes"
+        testimonials={[
+          {
+            name: "Nombre del Cliente",
+            role: "Profesión",
+            content:
+              "Testimonio del cliente sobre su experiencia transformadora",
+            image: "/images/testimonial-1.jpg",
+          },
+        ]}
+      />
+    </div>
+
+    <div id="faq">
+      <FAQSection
+        title="Preguntas Frecuentes"
+        description="Resolvemos tus dudas sobre este viaje transformador"
+        faqs={[
+          {
+            question: "¿Qué hace diferente a este camino de otros?",
+            answer:
+              "Este no es un curso tradicional. Es un viaje de transformación profunda que te ayudará a romper con los patrones de la matrix y conectar con tu verdadera esencia. No se trata solo de aprender, sino de experimentar y transformar.",
+          },
+          {
+            question: "¿Cuánto tiempo necesito dedicar al camino?",
+            answer:
+              "El camino se adapta a tu vida diaria. Con mentorías, material de estudio y ejercicios prácticos que puedes realizar a tu propio ritmo.",
+          },
+          {
+            question: "¿Qué resultados puedo esperar?",
+            answer:
+              "Los resultados varían según tu compromiso, pero los participantes reportan: mayor claridad mental, liberación de creencias limitantes, mejor salud física y mental, relaciones más armoniosas, y una conexión más profunda con su propósito de vida. Todo esto mientras desarrollas una mentalidad que te permite operar fuera de la matrix.",
+          },
+          {
+            question: "¿Necesito experiencia previa en desarrollo personal?",
+            answer:
+              "No es necesario. El camino está diseñado para guiarte desde donde estés. Lo único que necesitas es la disposición a transformar tu vida y la apertura para explorar nuevas formas de pensar y ser.",
+          },
+          {
+            question: "¿Cómo es la metodología del camino?",
+            answer:
+              "Es una metodología única que combina principios espirituales, herramientas prácticas y técnicas energéticas para ayudarte a desbloquear tu potencial. Se enfoca en la coherencia entre todos tus cuerpos (físico, mental, emocional, energético y espiritual) para crear una transformación integral.",
+          },
+          {
+            question: "¿Qué tipo de soporte recibiré durante el camino?",
+            answer:
+              "Recibirás soporte continuo a través de mentorías grupales, una comunidad privada de seres conscientes, sesiones de preguntas y respuestas, y material exclusivo. Además, tendrás acceso a ejercicios prácticos y herramientas para la integración diaria.",
+          },
+        ]}
+      />
+    </div>
+  </div>
 </Layout>

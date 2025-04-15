@@ -1,0 +1,99 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  ctaText: string;
+  ctaLink: string;
+  hideSecondaryButton?: boolean;
+}
+
+const {
+  title,
+  subtitle,
+  ctaText,
+  ctaLink,
+  hideSecondaryButton = false,
+} = Astro.props;
+---
+
+<section
+  class="relative min-h-screen flex items-center justify-center overflow-hidden -mt-16"
+>
+  <!-- Fondo con gradiente y efecto de luz -->
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-oxford-blue-3/50 via-oxford-blue-2/70 to-oxford-blue/90"
+  >
+    <div
+      class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-true-blue/10 via-transparent to-transparent"
+    >
+    </div>
+  </div>
+
+  <!-- Imagen de fondo con efecto translúcido -->
+  <div class="absolute inset-0">
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-oxford-blue-3/50 via-transparent to-transparent z-10"
+    >
+    </div>
+    <img
+      src="/cover.png"
+      alt="Background cover"
+      class="absolute left-0 top-0 h-full w-auto object-cover opacity-35 mix-blend-overlay"
+    />
+  </div>
+
+  <!-- Superposición para suavizar transiciones -->
+  <div class="section-overlay"></div>
+  <div class="section-transition-bottom"></div>
+
+  <!-- Formas flotantes -->
+  <div class="floating-shape top-1/4 left-1/4 animate-pulse opacity-30"></div>
+  <div
+    class="floating-shape bottom-1/4 right-1/4 animate-pulse delay-300 opacity-30"
+  >
+  </div>
+
+  <!-- Efecto de partículas o estrellas -->
+  <div
+    class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iYSIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMjAgMjAiPjxjaXJjbGUgY3g9IjEiIGN5PSIxIiByPSIxIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjYSkiLz48L3N2Zz4=')] opacity-20"
+  >
+  </div>
+
+  <div class="container relative z-10">
+    <div class="content-container text-center">
+      <h1
+        class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg gradient-text"
+      >
+        {title}
+      </h1>
+      <div class="decorative-line">
+        <p class="text-cool-gray drop-shadow-md subtitle">
+          {subtitle}
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+        <a
+          href={ctaLink}
+          class="inline-block bg-true-blue hover:bg-sapphire text-white px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl relative overflow-hidden group text-xl"
+        >
+          <span class="relative z-10">{ctaText}</span>
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-true-blue to-sapphire opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+          </div>
+        </a>
+        {
+          !hideSecondaryButton && (
+            <a
+              href="#problem"
+              class="inline-block bg-oxford-blue/50 hover:bg-oxford-blue/70 text-white px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl relative overflow-hidden group text-xl"
+            >
+              <span class="relative z-10">Conocer más</span>
+              <div class="absolute inset-0 bg-gradient-to-r from-oxford-blue to-oxford-blue-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </a>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</section>

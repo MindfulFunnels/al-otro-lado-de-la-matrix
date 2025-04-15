@@ -1,0 +1,197 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const whatsappGroupLink = "https://chat.whatsapp.com/Llt517pWQsrE8LP3CUayTI"; // Replace with your actual WhatsApp group link
+---
+
+<Layout hideNav={true}>
+  <div class="thanks-container">
+    <img src="/cover.png" alt="Background cover" class="background-image" />
+    <div class="background-overlay"></div>
+
+    <div class="hero-section">
+      <h1 class="hero-title">¡Gracias por unirte!</h1>
+      <p class="hero-subtitle">
+        Has dado el primer paso hacia tu transformación. Te esperamos en el
+        grupo de WhatsApp para continuar este viaje juntos.
+      </p>
+    </div>
+
+    <div class="thanks-content">
+      <h2>¿Qué sigue?</h2>
+      <p>
+        En breve recibirás un correo electrónico con toda la información
+        necesaria para comenzar tu viaje.
+      </p>
+      <p>
+        Mientras tanto, únete a nuestro grupo de WhatsApp donde compartiremos
+        contenido exclusivo y podrás conectar con otros seres conscientes que,
+        como tú, han decidido dar el salto.
+      </p>
+
+      <div class="whatsapp-button-container">
+        <a
+          href={whatsappGroupLink}
+          class="whatsapp-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Unirse al Grupo de WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .thanks-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Fondo con gradiente y efecto de luz */
+  .thanks-container::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+      to bottom right,
+      rgba(0, 13, 36, 0.5),
+      rgba(0, 13, 36, 0.7),
+      rgba(0, 13, 36, 0.9)
+    );
+    z-index: -2;
+  }
+
+  .thanks-container::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(
+      circle at center,
+      rgba(0, 90, 255, 0.1),
+      transparent,
+      transparent
+    );
+    z-index: -1;
+  }
+
+  /* Imagen de fondo con efecto translúcido */
+  .background-image {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: auto;
+    object-fit: cover;
+    opacity: 0.35;
+    mix-blend-mode: overlay;
+    z-index: -3;
+  }
+
+  .background-overlay {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(0, 13, 36, 0.5),
+      transparent,
+      transparent
+    );
+    z-index: -2;
+  }
+
+  .hero-section {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: #e2e8f0;
+    margin-bottom: 2rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .thanks-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1;
+  }
+
+  .thanks-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+
+  .thanks-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+
+  .whatsapp-button-container {
+    margin-top: 2rem;
+  }
+
+  .whatsapp-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+
+  .whatsapp-button:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+
+    .thanks-content {
+      padding: 1.5rem;
+    }
+
+    .thanks-content h2 {
+      font-size: 1.5rem;
+    }
+
+    .thanks-content p {
+      font-size: 1rem;
+    }
+  }
+</style>
