@@ -24,6 +24,19 @@ import LiveEventSection from "../components/LiveEventSection.astro";
     />
   </div>
 
+  <div id="live-event">
+    <LiveEventSection />
+  </div>
+
+  <div id="final-cta">
+    <FinalCTASection
+      title="¿Estás Listo para la Transformación?"
+      description="Todo el mundo sabe lo que tiene que hacer, pero casi nadie lo hace. La pregunta es ¿por qué? La respuesta está AL OTRO LADO DE LA MATRIX."
+      ctaText="Inscribirme Ahora"
+      ctaLink="#contacto"
+    />
+  </div>
+
   <div id="problem">
     <ProblemSection
       title="¿Te sientes atrapado en la Matrix?"
@@ -65,87 +78,73 @@ import LiveEventSection from "../components/LiveEventSection.astro";
         "Mantenimiento de la coherencia y expansión continua de consciencia",
       ]}
     />
+  </div>
 
-    <div id="live-event">
-      <LiveEventSection />
-    </div>
+  <div id="about">
+    <AboutSection
+      title="Luis Garre"
+      description="Mentor #1 que expone y hackea el sistema corrupto y la matrix de control. Creador de una metodología única y transformadora."
+      achievements={[
+        "Impactando a millones en redes sociales con mensajes de verdad y consciencia",
+        "Autor de libros best-seller que se venden por miles en todo el planeta",
+        "Creador de una comunidad de un millón de seres humanos conscientes",
+        "Experto en desbloquear mentes y transformar vidas en pocas semanas",
+        "Viviendo de su propósito con energía ilimitada y salud máxima",
+        "Familia feliz y próspera, rompiendo el techo económico de la matrix",
+      ]}
+    />
+  </div>
 
-    <div id="final-cta">
-      <FinalCTASection
-        title="¿Estás Listo para la Transformación?"
-        description="Todo el mundo sabe lo que tiene que hacer, pero casi nadie lo hace. La pregunta es ¿por qué? La respuesta está AL OTRO LADO DE LA MATRIX."
-        ctaText="Inscribirme Ahora"
-        ctaLink="#contacto"
-      />
-    </div>
+  <div id="testimonials">
+    <TestimonialsSection
+      title="Lo que dicen nuestros clientes"
+      testimonials={[
+        {
+          name: "Nombre del Cliente",
+          role: "Profesión",
+          content: "Testimonio del cliente sobre su experiencia transformadora",
+          image: "/images/testimonial-1.jpg",
+        },
+      ]}
+    />
+  </div>
 
-    <div id="about">
-      <AboutSection
-        title="Luis Garre"
-        description="Mentor #1 que expone y hackea el sistema corrupto y la matrix de control. Creador de una metodología única y transformadora."
-        achievements={[
-          "Impactando a millones en redes sociales con mensajes de verdad y consciencia",
-          "Autor de libros best-seller que se venden por miles en todo el planeta",
-          "Creador de una comunidad de un millón de seres humanos conscientes",
-          "Experto en desbloquear mentes y transformar vidas en pocas semanas",
-          "Viviendo de su propósito con energía ilimitada y salud máxima",
-          "Familia feliz y próspera, rompiendo el techo económico de la matrix",
-        ]}
-      />
-    </div>
-
-    <div id="testimonials">
-      <TestimonialsSection
-        title="Lo que dicen nuestros clientes"
-        testimonials={[
-          {
-            name: "Nombre del Cliente",
-            role: "Profesión",
-            content:
-              "Testimonio del cliente sobre su experiencia transformadora",
-            image: "/images/testimonial-1.jpg",
-          },
-        ]}
-      />
-    </div>
-
-    <div id="faq">
-      <FAQSection
-        title="Preguntas Frecuentes"
-        description="Resolvemos tus dudas sobre este viaje transformador"
-        faqs={[
-          {
-            question: "¿Qué hace diferente a este camino de otros?",
-            answer:
-              "Este no es un curso tradicional. Es un viaje de transformación profunda que te ayudará a romper con los patrones de la matrix y conectar con tu verdadera esencia. No se trata solo de aprender, sino de experimentar y transformar.",
-          },
-          {
-            question: "¿Cuánto tiempo necesito dedicar al camino?",
-            answer:
-              "El camino se adapta a tu vida diaria. Con mentorías, material de estudio y ejercicios prácticos que puedes realizar a tu propio ritmo.",
-          },
-          {
-            question: "¿Qué resultados puedo esperar?",
-            answer:
-              "Los resultados varían según tu compromiso, pero los participantes reportan: mayor claridad mental, liberación de creencias limitantes, mejor salud física y mental, relaciones más armoniosas, y una conexión más profunda con su propósito de vida. Todo esto mientras desarrollas una mentalidad que te permite operar fuera de la matrix.",
-          },
-          {
-            question: "¿Necesito experiencia previa en desarrollo personal?",
-            answer:
-              "No es necesario. El camino está diseñado para guiarte desde donde estés. Lo único que necesitas es la disposición a transformar tu vida y la apertura para explorar nuevas formas de pensar y ser.",
-          },
-          {
-            question: "¿Cómo es la metodología del camino?",
-            answer:
-              "Es una metodología única que combina principios espirituales, herramientas prácticas y técnicas energéticas para ayudarte a desbloquear tu potencial. Se enfoca en la coherencia entre todos tus cuerpos (físico, mental, emocional, energético y espiritual) para crear una transformación integral.",
-          },
-          {
-            question: "¿Qué tipo de soporte recibiré durante el camino?",
-            answer:
-              "Recibirás soporte continuo a través de mentorías grupales, una comunidad privada de seres conscientes, sesiones de preguntas y respuestas, y material exclusivo. Además, tendrás acceso a ejercicios prácticos y herramientas para la integración diaria.",
-          },
-        ]}
-      />
-    </div>
+  <div id="faq">
+    <FAQSection
+      title="Preguntas Frecuentes"
+      description="Resolvemos tus dudas sobre este viaje transformador"
+      faqs={[
+        {
+          question: "¿Qué hace diferente a este camino de otros?",
+          answer:
+            "Este no es un curso tradicional. Es un viaje de transformación profunda que te ayudará a romper con los patrones de la matrix y conectar con tu verdadera esencia. No se trata solo de aprender, sino de experimentar y transformar.",
+        },
+        {
+          question: "¿Cuánto tiempo necesito dedicar al camino?",
+          answer:
+            "El camino se adapta a tu vida diaria. Con mentorías, material de estudio y ejercicios prácticos que puedes realizar a tu propio ritmo.",
+        },
+        {
+          question: "¿Qué resultados puedo esperar?",
+          answer:
+            "Los resultados varían según tu compromiso, pero los participantes reportan: mayor claridad mental, liberación de creencias limitantes, mejor salud física y mental, relaciones más armoniosas, y una conexión más profunda con su propósito de vida. Todo esto mientras desarrollas una mentalidad que te permite operar fuera de la matrix.",
+        },
+        {
+          question: "¿Necesito experiencia previa en desarrollo personal?",
+          answer:
+            "No es necesario. El camino está diseñado para guiarte desde donde estés. Lo único que necesitas es la disposición a transformar tu vida y la apertura para explorar nuevas formas de pensar y ser.",
+        },
+        {
+          question: "¿Cómo es la metodología del camino?",
+          answer:
+            "Es una metodología única que combina principios espirituales, herramientas prácticas y técnicas energéticas para ayudarte a desbloquear tu potencial. Se enfoca en la coherencia entre todos tus cuerpos (físico, mental, emocional, energético y espiritual) para crear una transformación integral.",
+        },
+        {
+          question: "¿Qué tipo de soporte recibiré durante el camino?",
+          answer:
+            "Recibirás soporte continuo a través de mentorías grupales, una comunidad privada de seres conscientes, sesiones de preguntas y respuestas, y material exclusivo. Además, tendrás acceso a ejercicios prácticos y herramientas para la integración diaria.",
+        },
+      ]}
+    />
   </div>
 </Layout>
