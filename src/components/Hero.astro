@@ -62,7 +62,7 @@ const {
   <div class="container relative z-10">
     <div class="content-container text-center">
       <h1
-        class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg gradient-text"
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 drop-shadow-lg gradient-text"
       >
         {title}
       </h1>
@@ -71,10 +71,12 @@ const {
           {subtitle}
         </p>
       </div>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+      <div
+        class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-6 sm:mt-8"
+      >
         <a
           href={ctaLink}
-          class="inline-block bg-true-blue hover:bg-sapphire text-white px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl relative overflow-hidden group text-xl"
+          class="inline-block bg-true-blue hover:bg-sapphire text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl relative overflow-hidden group text-base sm:text-lg md:text-xl"
         >
           <span class="relative z-10">{ctaText}</span>
           <div
@@ -86,9 +88,9 @@ const {
           !hideSecondaryButton && (
             <a
               href="#problem"
-              class="inline-block bg-oxford-blue/50 hover:bg-oxford-blue/70 text-white px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl relative overflow-hidden group text-xl"
+              class="inline-block bg-oxford-blue/50 hover:bg-oxford-blue/70 text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl relative overflow-hidden group text-base sm:text-lg md:text-xl"
             >
-              <span class="relative z-10">Conocer más</span>
+              <span class="relative z-10">Quiero saber más</span>
               <div class="absolute inset-0 bg-gradient-to-r from-oxford-blue to-oxford-blue-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
           )

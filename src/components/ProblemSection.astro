@@ -37,23 +37,23 @@ const { title, description, questions } = Astro.props;
   <div class="container relative z-10">
     <div class="content-container text-center">
       <h2
-        class="text-4xl md:text-5xl font-bold text-white mb-10 drop-shadow-lg gradient-text"
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 sm:mb-8 md:mb-10 drop-shadow-lg gradient-text"
       >
         {title}
       </h2>
-      <div class="decorative-line mb-16">
+      <div class="decorative-line mb-8 sm:mb-12 md:mb-16">
         <p class="text-cool-gray drop-shadow-md subtitle">
           {description}
         </p>
       </div>
-      <div class="space-y-8">
+      <div class="space-y-4 sm:space-y-6 md:space-y-8">
         {
           questions.map((question) => (
-            <div class="glass-card p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
+            <div class="glass-card p-4 sm:p-6 md:p-8 rounded-lg transform hover:scale-105 transition-all duration-300">
               <div class="flex items-start">
-                <div class="w-10 h-10 rounded-full bg-true-blue/20 flex items-center justify-center mr-6 flex-shrink-0">
+                <div class="w-8 sm:w-9 md:w-10 h-8 sm:h-9 md:h-10 rounded-full bg-true-blue/20 flex items-center justify-center mr-4 sm:mr-5 md:mr-6 flex-shrink-0">
                   <svg
-                    class="w-5 h-5 text-true-blue"
+                    class="w-4 sm:w-4.5 md:w-5 h-4 sm:h-4.5 md:h-5 text-true-blue"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -66,7 +66,9 @@ const { title, description, questions } = Astro.props;
                     />
                   </svg>
                 </div>
-                <p class="text-lg md:text-xl text-white">{question}</p>
+                <p class="text-base sm:text-lg md:text-xl text-white">
+                  {question}
+                </p>
               </div>
             </div>
           ))
