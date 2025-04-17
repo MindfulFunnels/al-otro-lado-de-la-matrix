@@ -1,49 +1,74 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-const whatsappGroupLink = "https://chat.whatsapp.com/Llt517pWQsrE8LP3CUayTI"; // Replace with your actual WhatsApp group link
+const whatsappGroupLink = "https://chat.whatsapp.com/Llt517pWQsrE8LP3CUayTI";
 ---
 
-<Layout hideNav={true}>
-  <div class="thanks-container">
-    <img src="/cover.png" alt="Background cover" class="background-image" />
-    <div class="background-overlay"></div>
+<script>
+  setTimeout(() => {
+    window.location.href = "https://chat.whatsapp.com/Llt517pWQsrE8LP3CUayTI";
+  }, 10000);
+</script>
 
-    <div class="hero-section">
-      <h1 class="hero-title">¡Gracias por unirte!</h1>
-      <p class="hero-subtitle">
-        Has dado el primer paso hacia tu transformación. Te esperamos en el
-        grupo de WhatsApp para continuar este viaje juntos.
-      </p>
+<Layout hideNav={true}>
+  <div class='thanks-container'>
+    <img src='/cover.png' alt='Background cover' class='background-image' />
+    <div class='background-overlay'></div>
+
+    <div class='hero-section'>
+      <h1 class='hero-title'>¡Gracias por unirte!</h1>
     </div>
 
-    <div class="thanks-content">
-      <h2>¿Qué sigue?</h2>
-      <p>
-        En breve recibirás un correo electrónico con toda la información
-        necesaria para comenzar tu viaje.
+    <div class='progress-section'>
+      <p class='progress-text'>
+        Tu registro está al <strong>90%</strong>. Solo falta un paso...
       </p>
-      <p>
-        Mientras tanto, únete a nuestro grupo de WhatsApp donde compartiremos
-        contenido exclusivo y podrás conectar con otros seres conscientes que,
-        como tú, han decidido dar el salto.
-      </p>
-
-      <div class="whatsapp-button-container">
-        <a
-          href={whatsappGroupLink}
-          class="whatsapp-button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>Unirse al Grupo de WhatsApp</span>
-        </a>
+      <div class='progress-wrapper'>
+        <div class='progress-bar ninety'></div>
       </div>
     </div>
   </div>
 </Layout>
 
 <style>
+  .progress-section {
+    margin-top: 2rem;
+    text-align: center;
+    color: #fff;
+  }
+
+  .progress-text {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .progress-wrapper {
+    width: 100%;
+    max-width: 400px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .progress-bar.ninety {
+    width: 90%;
+    height: 100%;
+    background: linear-gradient(90deg, #25d366, #1ebea5);
+    animation: grow 2s ease-out forwards;
+    border-radius: 5px;
+  }
+
+  @keyframes grow {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 90%;
+    }
+  }
+
   .thanks-container {
     min-height: 100vh;
     display: flex;
@@ -56,7 +81,6 @@ const whatsappGroupLink = "https://chat.whatsapp.com/Llt517pWQsrE8LP3CUayTI"; //
     overflow: hidden;
   }
 
-  /* Fondo con gradiente y efecto de luz */
   .thanks-container::before {
     content: "";
     position: fixed;
@@ -83,7 +107,6 @@ const whatsappGroupLink = "https://chat.whatsapp.com/Llt517pWQsrE8LP3CUayTI"; //
     z-index: -1;
   }
 
-  /* Imagen de fondo con efecto translúcido */
   .background-image {
     position: fixed;
     left: 0;
@@ -123,74 +146,12 @@ const whatsappGroupLink = "https://chat.whatsapp.com/Llt517pWQsrE8LP3CUayTI"; //
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
 
-  .hero-subtitle {
-    font-size: 1.5rem;
-    color: #e2e8f0;
-    margin-bottom: 2rem;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  }
-
-  .thanks-content {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 1rem;
-    backdrop-filter: blur(10px);
-    position: relative;
-    z-index: 1;
-  }
-
-  .thanks-content h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #fff;
-  }
-
-  .thanks-content p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    color: #fff;
-  }
-
-  .whatsapp-button-container {
-    margin-top: 2rem;
-  }
-
-  .whatsapp-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #25d366;
-    color: white;
-    text-decoration: none;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    transition: transform 0.3s ease;
-  }
-
-  .whatsapp-button:hover {
-    transform: scale(1.05);
-  }
-
   @media (max-width: 768px) {
     .hero-title {
       font-size: 2rem;
     }
 
-    .hero-subtitle {
-      font-size: 1.2rem;
-    }
-
-    .thanks-content {
-      padding: 1.5rem;
-    }
-
-    .thanks-content h2 {
-      font-size: 1.5rem;
-    }
-
-    .thanks-content p {
+    .progress-text {
       font-size: 1rem;
     }
   }
