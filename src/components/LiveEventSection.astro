@@ -1,4 +1,6 @@
 ---
+import Youtube from "./Youtube.astro";
+
 interface Props {
   title?: string;
 }
@@ -6,219 +8,197 @@ interface Props {
 const { title = "Evento en Vivo" } = Astro.props;
 ---
 
-<section class="relative py-24 overflow-hidden">
+<section class='relative py-24 overflow-hidden'>
   <!-- Fondo con gradiente -->
-  <div class="absolute inset-0">
-    <div class="section-gradient"></div>
+  <div class='absolute inset-0'>
+    <div class='section-gradient'></div>
     <div
-      class="absolute inset-0 bg-gradient-to-br from-oxford-blue-3/50 via-oxford-blue-2/70 to-oxford-blue/90"
+      class='absolute inset-0 bg-gradient-to-br from-oxford-blue-3/50 via-oxford-blue-2/70 to-oxford-blue/90'
     >
       <div
-        class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-true-blue/10 via-transparent to-transparent"
+        class='absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-true-blue/10 via-transparent to-transparent'
       >
       </div>
     </div>
   </div>
 
   <!-- Superposición para suavizar transiciones -->
-  <div class="section-overlay"></div>
-  <div class="section-transition-top"></div>
-  <div class="section-transition-bottom"></div>
+  <div class='section-overlay'></div>
+  <div class='section-transition-top'></div>
+  <div class='section-transition-bottom'></div>
 
   <!-- Formas flotantes -->
-  <div class="floating-shape top-1/4 left-1/4 animate-pulse opacity-30"></div>
+  <div class='floating-shape top-1/4 left-1/4 animate-pulse opacity-30'></div>
   <div
-    class="floating-shape bottom-1/4 right-1/4 animate-pulse delay-300 opacity-30"
+    class='floating-shape bottom-1/4 right-1/4 animate-pulse delay-300 opacity-30'
   >
   </div>
 
-  <div class="container relative z-10">
-    <div class="content-container text-center">
+  <div class='container relative z-10'>
+    <div class='content-container text-center'>
       <h2
-        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 sm:mb-8 md:mb-10 drop-shadow-lg gradient-text"
+        class='font-bold text-white mb-6 sm:mb-8 md:mb-10 drop-shadow-lg gradient-text'
       >
         {title}
       </h2>
 
-      <h3
-        class="text-xl sm:text-2xl md:text-3xl text-white mb-6 sm:mb-8 md:mb-10"
-      >
+      <h3 class='text-xl md:text-2xl text-white mb-6 sm:mb-8 md:mb-10'>
         Una masterclass gratuita para rediseñar tu camino profesional desde el
         alma, vivir de lo que amás y construir una vida con propósito, claridad
         y libertad.
       </h3>
 
-      <div class="max-w-7xl mx-auto">
-        <div
-          class="glass-card p-4 sm:p-6 md:p-8 rounded-lg transform hover:scale-105 transition-all duration-300"
-        >
-          <div class="space-y-4 sm:space-y-6 md:space-y-8">
+      <div class='max-w-7xl mx-auto'>
+        <div class='glass-card p-4 sm:p-6 md:p-8 rounded-lg'>
+          <div class='space-y-4 sm:space-y-6 md:space-y-8'>
             <!-- Encabezado con icono destacado -->
-            <div class="flex flex-col items-center mb-4 sm:mb-6 md:mb-8">
+            <div class='flex flex-col items-center mb-4 sm:mb-6 md:mb-8'>
               <div
-                class="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 rounded-full bg-true-blue/20 flex items-center justify-center mb-2 sm:mb-3 md:mb-4"
+                class='w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 rounded-full bg-true-blue/20 flex items-center justify-center mb-2 sm:mb-3 md:mb-4'
               >
                 <svg
-                  class="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-true-blue"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  class='w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-true-blue'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'
                   ></path>
                 </svg>
               </div>
               <h3
-                class="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-1 sm:mb-2"
+                class='text-lg sm:text-xl md:text-2xl font-semibold text-white mb-1 sm:mb-2'
               >
                 Cuándo y dónde
               </h3>
               <div
-                class="w-16 sm:w-20 md:w-24 h-1 bg-true-blue/50 rounded-full"
+                class='w-16 sm:w-20 md:w-24 h-1 bg-true-blue/50 rounded-full'
               >
               </div>
             </div>
 
             <!-- Detalles del evento -->
             <div
-              class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
+              class='grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8'
             >
               <div
-                class="glass-card p-4 sm:p-5 md:p-6 rounded-lg transform hover:scale-105 transition-all duration-300"
+                class='glass-card p-4 sm:p-5 md:p-6 rounded-lg transform hover:scale-105 transition-all duration-300'
               >
-                <div class="flex flex-col items-center text-center">
+                <div class='flex flex-col items-center text-center'>
                   <svg
-                    class="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-true-blue mb-2 sm:mb-3 md:mb-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+                    class='w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-true-blue mb-2 sm:mb-3 md:mb-4'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'
                     ></path>
                   </svg>
-                  <h4
-                    class="text-base sm:text-lg md:text-xl font-semibold text-white mb-1 sm:mb-2"
-                  >
-                    Fecha
-                  </h4>
-                  <p class="text-sm sm:text-base md:text-lg text-white">
-                    Domingo 11 de mayo
-                  </p>
+                  <h4 class='text-white mb-1 sm:mb-2'>Fecha</h4>
+                  <p class='textevent text-white'>Domingo 11 de mayo</p>
                 </div>
               </div>
 
               <div
-                class="glass-card p-4 sm:p-5 md:p-6 rounded-lg transform hover:scale-105 transition-all duration-300"
+                class='glass-card p-4 sm:p-5 md:p-6 rounded-lg transform hover:scale-105 transition-all duration-300'
               >
-                <div class="flex flex-col items-center text-center">
+                <div class='flex flex-col items-center text-center'>
                   <svg
-                    class="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-true-blue mb-2 sm:mb-3 md:mb-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+                    class='w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-true-blue mb-2 sm:mb-3 md:mb-4'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'></path>
                   </svg>
-                  <h4
-                    class="text-base sm:text-lg md:text-xl font-semibold text-white mb-1 sm:mb-2"
-                  >
-                    Horario
-                  </h4>
+                  <h4 class='text-white mb-1 sm:mb-2'>Horario</h4>
                   <p
-                    class="text-sm sm:text-base md:text-lg text-white flex items-center justify-center gap-2"
+                    class='textevent text-white flex items-center justify-center gap-2'
                   >
-                    <span class="fi fi-es"></span>
+                    <span class='fi fi-es'></span>
                     19:00h España
                   </p>
                   <p
-                    class="text-sm sm:text-base md:text-lg text-white flex items-center justify-center gap-2"
+                    class='textevent text-white flex items-center justify-center gap-2'
                   >
-                    <span class="fi fi-ar"></span>
+                    <span class='fi fi-ar'></span>
                     14:00h Argentina
                   </p>
                   <p
-                    class="text-sm sm:text-base md:text-lg text-white flex items-center justify-center gap-2"
+                    class='textevent text-white flex items-center justify-center gap-2'
                   >
-                    <span class="fi fi-mx"></span>
+                    <span class='fi fi-mx'></span>
                     11:00h México
                   </p>
                   <p
-                    class="text-sm sm:text-base md:text-lg text-white flex items-center justify-center gap-2"
+                    class='textevent text-white flex items-center justify-center gap-2'
                   >
-                    <span class="fi fi-us"></span>
+                    <span class='fi fi-us'></span>
                     13:00h Miami
                   </p>
                 </div>
               </div>
 
               <div
-                class="glass-card p-4 sm:p-5 md:p-6 rounded-lg transform hover:scale-105 transition-all duration-300"
+                class='glass-card p-4 sm:p-5 md:p-6 rounded-lg transform hover:scale-105 transition-all duration-300'
               >
-                <div class="flex flex-col items-center text-center">
+                <div class='flex flex-col items-center text-center'>
                   <svg
-                    class="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-true-blue mb-2 sm:mb-3 md:mb-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+                    class='w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-true-blue mb-2 sm:mb-3 md:mb-4'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9'
                     ></path>
                   </svg>
-                  <h4
-                    class="text-base sm:text-lg md:text-xl font-semibold text-white mb-1 sm:mb-2"
-                  >
-                    Plataforma
-                  </h4>
-                  <p class="text-sm sm:text-base md:text-lg text-white">
-                    En vivo por YouTube
-                  </p>
+                  <h4 class='text-white mb-1 sm:mb-2'>Plataforma</h4>
+                  <Youtube />
                 </div>
               </div>
             </div>
 
             <!-- Aviso importante -->
             <div
-              class="mt-4 sm:mt-6 md:mt-8 p-4 sm:p-5 md:p-6 bg-oxford-blue/50 rounded-lg border border-true-blue/30"
+              class='mt-4 sm:mt-6 md:mt-8 p-4 sm:p-5 md:p-6 bg-oxford-blue/50 rounded-lg border border-true-blue/30'
             >
               <div
-                class="flex items-center justify-center mb-2 sm:mb-3 md:mb-4"
+                class='flex items-center justify-center mb-2 sm:mb-3 md:mb-4'
               >
                 <svg
-                  class="w-5 sm:w-6 h-5 sm:h-6 text-true-blue mr-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  class='w-5 sm:w-6 h-5 sm:h-6 text-true-blue mr-2'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
                   ></path>
                 </svg>
-                <h4
-                  class="text-base sm:text-lg md:text-xl font-semibold text-white"
-                >
+                <h4 class='text-base sm:text-lg md:text-xl text-white'>
                   Importante
                 </h4>
               </div>
-              <p class="text-center text-sm sm:text-base md:text-lg text-white">
+              <p class='text-center text-sm sm:text-base md:text-lg text-white'>
                 Este evento no se repetirá. Será tu única oportunidad para
                 descubrir cómo hackear la Matrix y empezar a vivir tu profesión,
                 empresa o proyecto desde tu alma, con propósito, claridad,
