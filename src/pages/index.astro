@@ -25,10 +25,6 @@ import CTAButton from "../components/CTAButton.astro";
     />
   </div>
 
-  <div id='live-event'>
-    <LiveEventSection />
-  </div>
-
   <div id='final-cta'>
     <FinalCTASection
       title='¿Estás listo/a para dar el primer paso hacia una vida con propósito?'
@@ -36,6 +32,10 @@ import CTAButton from "../components/CTAButton.astro";
       ctaText='Inscribirme Ahora'
       ctaLink='#contacto'
     />
+  </div>
+
+  <div id='live-event'>
+    <LiveEventSection />
   </div>
 
   <div id='learn-more'>
@@ -49,6 +49,14 @@ import CTAButton from "../components/CTAButton.astro";
         "¿Intuyes que hay otra forma de vivir y trabajar, pero aún no encontraste el camino?",
         "¿Alguna vez amaste tu trabajo, pero sientes que en el camino perdió sentido?",
       ]}
+    />
+  </div>
+  <div class='flex items-center justify-center'>
+    <CTAButton
+      href='#final-cta'
+      label='Quiero vivir esta transformación'
+      variant='primary'
+      class='px-10 py-4 text-3xl'
     />
   </div>
 
@@ -65,7 +73,14 @@ import CTAButton from "../components/CTAButton.astro";
       ]}
     />
   </div>
-
+  <div class='flex items-center justify-center'>
+    <CTAButton
+      href='#final-cta'
+      label='Reservar mi lugar en la masterclass'
+      variant='primary'
+      class='px-10 py-4 text-3xl'
+    />
+  </div>
   <div id='who-is-it-for'>
     <CaminoSection
       title='Para quien esta destinado este evento'
@@ -82,6 +97,28 @@ import CTAButton from "../components/CTAButton.astro";
     />
   </div>
 
+  <div class='flex items-center justify-center'>
+    <CTAButton
+      href='#final-cta'
+      label='Reservar lugar'
+      variant='primary'
+      class='px-10 py-4 text-3xl'
+    />
+  </div>
+  <div id='about'>
+    <AboutSection
+      title='Luis Garre'
+      description='Mentor #1 que expone y hackea el sistema corrupto y la matrix de control. Creador de una metodología única y transformadora.'
+      achievements={[
+        "Impactando a millones en redes con mensajes de verdad, despertar y conciencia",
+        "Autor de libros best-seller que se venden por miles en todo el planeta",
+        "Creador de una comunidad de un millón de seres humanos conscientes",
+        "Experto en desbloquear mentes y transformar vidas en pocas semanas",
+        "Viviendo de su propósito con energía ilimitada y salud máxima",
+        "Familia feliz y próspera, rompiendo el techo económico de la matrix",
+      ]}
+    />
+  </div>
   <div id='testimonials'>
     <TestimonialsSection
       title='Testimonios de personas que han logrado salir de la matrix'
@@ -119,20 +156,6 @@ import CTAButton from "../components/CTAButton.astro";
           answer:
             "La masterclass dura aproximadamente 90 minutos y se transmite en vivo por YouTube. Al registrarte, vas a recibir acceso al grupo de WhatsApp donde te compartiremos todos los detalles y el link directo para asistir.",
         },
-      ]}
-    />
-  </div>
-  <div id='about'>
-    <AboutSection
-      title='Luis Garre'
-      description='Mentor #1 que expone y hackea el sistema corrupto y la matrix de control. Creador de una metodología única y transformadora.'
-      achievements={[
-        "Impactando a millones en redes con mensajes de verdad, despertar y conciencia",
-        "Autor de libros best-seller que se venden por miles en todo el planeta",
-        "Creador de una comunidad de un millón de seres humanos conscientes",
-        "Experto en desbloquear mentes y transformar vidas en pocas semanas",
-        "Viviendo de su propósito con energía ilimitada y salud máxima",
-        "Familia feliz y próspera, rompiendo el techo económico de la matrix",
       ]}
     />
   </div>

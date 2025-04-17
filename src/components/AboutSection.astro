@@ -31,7 +31,7 @@ const { title, description, achievements } = Astro.props;
     <img
       src='/about.png'
       alt='About section background'
-      class='absolute right-0 top-0 h-full w-auto object-cover opacity-35 mix-blend-overlay'
+      class='absolute right-0 top-0 h-full w-auto object-cover opacity-70 mix-blend-overlay'
     />
   </div>
 
@@ -49,7 +49,9 @@ const { title, description, achievements } = Astro.props;
 
   <div class='container relative z-10'>
     <div class='content-container text-center'>
-      <h2 class='font-bold text-white mb-10 drop-shadow-lg gradient-text'>
+      <h2
+        class='text-3xl font-bold text-white mb-10 drop-shadow-lg gradient-text'
+      >
         {title}
       </h2>
       <div class='decorative-line mb-16'>
