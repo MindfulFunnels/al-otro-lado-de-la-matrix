@@ -1,4 +1,5 @@
 ---
+import Whatsapp from "../components/Whatsapp.astro";
 import Layout from "../layouts/Layout.astro";
 
 const whatsappGroupLink = "https://chat.whatsapp.com/Llt517pWQsrE8LP3CUayTI";
@@ -20,13 +21,22 @@ const whatsappGroupLink = "https://chat.whatsapp.com/Llt517pWQsrE8LP3CUayTI";
     </div>
 
     <div class='progress-section'>
-      <p class='progress-text'>
+      <p class='progress-text text-white'>
         Tu registro está al <strong>90%</strong>. Solo falta un paso...
       </p>
       <div class='progress-wrapper'>
         <div class='progress-bar ninety'></div>
       </div>
     </div>
+
+    <a href='https://chat.whatsapp.com/Llt517pWQsrE8LP3CUayTI' class='mt-6'>
+      <button
+        class='bg-blue-500 text-white px-10 py-6 text-2xl rounded flex flex-row'
+      >
+        Unirme al grupo
+        <Whatsapp class='ml-2' />
+      </button>
+    </a>
   </div>
 </Layout>
 
