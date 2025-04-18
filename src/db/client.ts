@@ -6,11 +6,11 @@ const client = createClient({
   authToken: import.meta.env.DATABASE_TOKEN ?? "",
 });
 
-export const addUser = async (name: string, email: string, phone: number) => {
+export const addUser = async (name: string, email: string) => {
   try {
     await client.execute({
-      sql: "INSERT INTO Usuarios (name, email, phone) VALUES (?, ?, ?)",
-      args: [name, email, phone],
+      sql: "INSERT INTO Usuarios (name, email) VALUES (?, ?)",
+      args: [name, email],
     });
   } catch (error) {
     console.error("Database error:", error);

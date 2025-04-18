@@ -54,24 +54,24 @@ export default function RegisterBox() {
       });
 
       if (userRes.ok) {
-        const emailRes = await fetch("/api/sendEmails", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: capitalizedName,
-            email: email.toLowerCase(),
-          }),
-        });
+        // const emailRes = await fetch("/api/sendEmails", {
+        //   method: "POST",
+        //   headers: {
+        //     "Content-Type": "application/json",
+        //   },
+        //   body: JSON.stringify({
+        //     name: capitalizedName,
+        //     email: email.toLowerCase(),
+        //   }),
+        // });
 
-        if (!emailRes.ok) {
-          setErrorMessages(
-            "Verifica que tu correo sea correcto y vuelve a intentarlo"
-          );
-          setIsSubmitting(false);
-          return;
-        }
+        // if (!emailRes.ok) {
+        //   setErrorMessages(
+        //     "Verifica que tu correo sea correcto y vuelve a intentarlo"
+        //   );
+        //   setIsSubmitting(false);
+        //   return;
+        // }
 
         setSuccessMessage("¡Registro exitoso! Te redirigiremos en breve...");
         setTimeout(() => {
